@@ -1,0 +1,33 @@
+{
+  "name": "rover-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -r dist",
+    "dev": "APP_VERSION=$npm_package_version npm run build && node dist/console/index.js",
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'test/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juca-dev/rover-test.git"
+  },
+  "keywords": [
+    "rover",
+    "test",
+    "typescript"
+  ],
+  "author": "Juca.DEV",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juca-dev/rover-test/issues"
+  },
+  "homepage": "https://github.com/juca-dev/rover-test#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.2.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "ts-node": "^9.1.1"
+  }
+}
